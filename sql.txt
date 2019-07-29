@@ -1,0 +1,15 @@
+select PRODUCT_NAME,SUM(DETAIL_TOTAL_PRICE) as SUMER from order_detail 
+left join product on order_detail.DETAIL_PRODUCT_ID =product.PRODUCT_ID
+WHERE DETAIL_DATE_TIME between'2019-01-01 00:00:00' and '2019-12-31 23:59:59'
+GROUP BY DETAIL_PRODUCT_ID 
+ORDER BY SUMER DESC  limit 0,8  
+
+select PRODUCT_NAME from order_detail left join product on order_detail.DETAIL_PRODUCT_ID =product.PRODUCT_ID
+
+
+select DETAIL_PRODUCT_ID  from order_detail  WHERE  DETAIL_PRODUCT_ID='cb636afe-9092-4fbf-a0c4-b6a657564972'
+
+ select PRODUCT_NAME  from product  WHERE PRODUCT_ID='cb636afe-9092-4fbf-a0c4-b6a657564972'
+ 
+ SELECT  DETAIL_PRODUCT_ID ,DETAIL_ORDER_ID,DETAIL_PRODUCT_COUNT,DETAIL_PRODUCT_PRICE , SUM(DETAIL_PRODUCT_PRICE) as  ss
+ from order_detail  WHERE  DETAIL_PRODUCT_ID='cb636afe-9092-4fbf-a0c4-b6a657564972'
