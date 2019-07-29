@@ -1,0 +1,61 @@
+
+.og-calendar .header {
+    position: relative;
+    height: 120rpx;
+    line-height: 120rpx;
+    font-size: 35rpx;
+    text-align: center;
+   
+}
+.og-calendar .header .month-pre,
+.og-calendar .header .month-next {
+    position: absolute;
+    top: 0;
+    width: 120rpx;
+    height: 120rpx
+}
+
+.og-calendar .header .month-pre {
+    left: 0;
+}
+.og-calendar .header .month-next {
+    right: 0;
+}
+.og-calendar .header .month-pre image,
+.og-calendar .header .month-next image {
+    margin-top: 30rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+
+
+.og-calendar .col {
+    width: 14.28571428571429%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15rpx 0;
+}
+.og-calendar .col text {
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    border: 2rpx solid transparent;
+}
+.og-calendar .body .col text {
+    border-radius: 50%;
+}
+.og-calendar .body .col.active text {
+    border-color: #E04343;
+}
+.og-calendar .body .col.old {
+    color: rgb(161, 161, 165)
+} 
+.og-calendar .body .col.current text,
+.og-calendar .body .col text:active {
+    background-color: #E04343;
+    color: rgb(22, 21, 21);
+}
